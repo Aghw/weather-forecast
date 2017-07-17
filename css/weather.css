@@ -1,0 +1,190 @@
+@import url(normalize.css);
+@import url(main.css);
+@import url("https://fonts.googleapis.com/css?family=Syncopate");
+html {
+  font: normal normal 14.28571px "Permanent Marker", sans-serif; }
+
+.flex-space-between, body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.flex-space-around, .weather-control-buttons, .main-content, .city-weather, .other-weather-deatails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.flex-space-center, #showGeoPosition, .currentWind,
+.currentCloud,
+.currentHumidity,
+.weatherDetail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-center;
+      -ms-flex-pack: space-center;
+          justify-content: space-center; }
+
+body {
+  position: relative;
+  max-width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #111;
+  margin: 0 auto; }
+
+#primary-content {
+  font: lighter normal 3rem "Permanent Marker", sans-serif;
+  text-align: center;
+  padding: 2rem;
+  color: #a38613; }
+  #primary-content::first-letter {
+    font-size: 5rem; }
+
+header {
+  background-color: #47300f; }
+
+footer p {
+  margin-top: 2rem;
+  text-align: center; }
+
+footer {
+  background-color: #47300f;
+  color: #a38613;
+  height: 8rem; }
+
+main {
+  margin: 0 auto;
+  width: 80%;
+  font-family: Quicksand;
+  padding-top: 2rem; }
+
+#weatherInfo {
+  font: bold normal 3em arial, sans-serif;
+  text-align: center;
+  color: white; }
+
+.weather-control-buttons {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 2rem; }
+
+div[class^="weather-"] button {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%; }
+
+.main-content {
+  margin: 0 auto;
+  width: 100%;
+  top: 2rem;
+  margin-bottom: 5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+#dateTime {
+  padding-top: 2rem;
+  height: 5rem;
+  width: 90%;
+  font-size: 1rem;
+  color: lightblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+#showGeoPosition {
+  width: 28rem;
+  margin: 1rem auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.city-weather {
+  position: relative;
+  background-color: black;
+  border-radius: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  @media (min-width: 1200px) {
+    .city-weather {
+      width: 55%; } }
+
+.other-weather-deatails {
+  width: 60%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.currentWind,
+.currentCloud,
+.currentHumidity,
+.weatherDetail {
+  height: 3rem;
+  width: 16rem;
+  color: white;
+  font-size: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.currentTemp {
+  height: 16rem;
+  width: 8rem;
+  font-size: 2rem;
+  margin: 0 auto;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.btnSeattle {
+  background-color: #43293d;
+  color: #f26fd4; }
+  .btnSeattle:hover, .btnSeattle:focus {
+    background-color: #6f3a62;
+    border-radius: 20%;
+    -webkit-transition: all 0.9s ease;
+    transition: all 0.9s ease; }
+  .btnSeattle:active {
+    background-color: #f26fd4; }
+
+.btnLondon {
+  background-color: #45391b;
+  color: #fec02d; }
+  .btnLondon:hover, .btnLondon:focus {
+    background-color: #735b20;
+    border-radius: 20%;
+    -webkit-transition: all 0.9s ease;
+    transition: all 0.9s ease; }
+  .btnLondon:active {
+    background-color: #fec02d; }
+
+.btnCurrentLoc {
+  background-color: #193c29;
+  color: #20d071; }
+  .btnCurrentLoc:hover, .btnCurrentLoc:focus {
+    background-color: #1b613b;
+    border-radius: 20%;
+    -webkit-transition: all 0.9s ease;
+    transition: all 0.9s ease; }
+  .btnCurrentLoc:active {
+    background-color: #20d071; }
+
+/*# sourceMappingURL=weather.css.map */

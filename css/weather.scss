@@ -1,0 +1,192 @@
+@import "normalize.css";
+@import "main.css";
+@import url('https://fonts.googleapis.com/css?family=Syncopate');
+@import "variables";
+
+html {
+  // font variant, font weight, font size/line-height
+  font: normal normal $html-font/$line-height 'Permanent Marker', sans-serif;
+}
+
+
+body {
+  position:relative;
+  max-width: $max-width;
+
+  @extend .flex-space-between;
+  flex-direction: column;
+
+  //  background-color: $white;
+   background-color: $black;
+   margin: 0 auto;
+}
+
+#primary-content {
+    font: lighter normal $header-font-size 'Permanent Marker', sans-serif;
+    text-align: center;
+    padding: $normal-padding;
+    color: $hdr-ftr-fg-color;
+
+    &::first-letter {
+      font-size: $first-letter;
+    }
+}
+
+header {
+  background-color: $header-bgd-color;
+}
+
+footer p {
+  margin-top: $normal-padding;
+  text-align: center;
+}
+
+
+footer {
+  background-color: $header-bgd-color;
+  color: $hdr-ftr-fg-color;
+  height: $normal-display-size;
+}
+
+
+main {
+  margin: 0 auto;
+  width: 80%;
+  font-family: Quicksand;
+  padding-top: $normal-padding;
+}
+
+#weatherInfo {
+  font: bold normal  3em  arial, sans-serif ;
+  text-align: center;
+  color: white;
+}
+
+.weather-control-buttons {
+  @extend .flex-space-around;
+  flex-wrap: wrap;
+  padding-bottom: $normal-padding;
+}
+
+div[class^="weather-"] button {
+  width: $btn-side-dim;
+  height: $btn-side-dim;
+  border-radius: 50%;
+}
+
+.main-content {
+  margin: 0 auto;
+  width: 100%;
+  top: $normal-padding;
+  margin-bottom: 5rem;
+
+  @extend .flex-space-around;
+  flex-wrap: wrap;
+  // background-color: black;
+
+}
+
+#dateTime {
+  padding-top: $normal-padding;
+  height: 5rem;
+  width: 90%;
+  font-size: 1rem;
+  color: lightblue ;
+
+  display:flex;
+  // flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+
+#showGeoPosition {
+  width: $map-width;
+  margin: 1rem auto;
+
+  @extend .flex-space-center;
+  align-items: center;
+}
+
+.city-weather {
+  position: relative;
+  background-color: black;
+  border-radius: 20px;
+
+  @extend .flex-space-around;
+  flex-wrap: wrap;
+
+  // background-image: url("/images/seattle1.jpg");
+  // background-repeat: no-repeat;
+
+  @media(min-width: 1200px){
+      width: 55%;
+    }
+}
+
+
+.other-weather-deatails {
+  // position: relative;
+  width: 60%;
+
+  @extend .flex-space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+
+.currentWind,
+.currentCloud,
+.currentHumidity,
+.weatherDetail {
+  height: 3rem;
+  width: 2 * $normal-display-size;
+
+  // border: 0.004rem dashed lightgrey;
+  color: $white;
+  font-size: 1rem;
+
+  @extend .flex-space-center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+
+.currentTemp {
+  height: 2 * $normal-display-size;
+  width: $normal-display-size;
+  font-size: 2rem;
+  margin: 0 auto;
+
+  color: $white;
+  display:flex;
+  align-items: center;
+}
+
+
+
+// set up an @each loop to go over the note map
+// and build the relevant color styles
+@each $btn, $colors in $btn-map {
+  .#{$btn} { // interpolating $note into  ".c"
+      // colors are in regular, hover, active order
+      $regular: nth($colors, 1); // #3e181b
+      $hover:   nth($colors, 2); // #661920
+      $active:  nth($colors, 3); // #db1d2d
+
+      background-color: $regular;
+      color: $active;
+
+      &:hover,
+      &:focus {
+        background-color: $hover;
+        border-radius: 20%;
+        transition: all 0.9s ease;
+      }
+
+      &:active {
+        background-color: $active;
+      }
+  }
+}

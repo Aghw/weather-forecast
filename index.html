@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <title>Weather of Seattle and London</title>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+      <link rel="stylesheet" type="text/css" href="css/weather.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent+Marker">
+      <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  </head>
+  <body>
+      <header>
+        <h1 id="primary-content">
+          Current Weather and Forcast of Cities
+        </h1>
+      </header>
+
+      <main>
+          <div class="main-content">
+            <div id="weatherInfo"></div>
+            <div id="dateTime"></div>
+
+              <div class="city-weather">
+
+                  <div class="currentTemp"></div>
+
+                  <div class="other-weather-deatails">
+
+
+                    <div class="weatherDetail"></div>
+                    <!-- <div class="currentTemp"></div> -->
+                    <div class="currentCloud"></div>
+                    <div class="currentHumidity"></div>
+                    <div class="currentWind"></div>
+
+                  </div>
+              </div>
+              <div id="showGeoPosition"></div>
+          </div>
+
+          <div id="weatherControls" class="weather-control-buttons">
+            <button type="button" id="seattleWeather" class="btnSeattle">Seattle</button>
+            <button type="button" id="londonWeather" class="btnLondon">London</button>
+            <button type="button" id="currentLocation" class="btnCurrentLoc">Current Location</button>
+          </div>
+      </main>
+
+      <footer>
+        <p>
+          &copy;2017. All rights reserved
+        </p>
+          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+          <script type="text/javascript" src="weather.js"></script>
+      </footer>
+  </body>
+</html>

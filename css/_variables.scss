@@ -1,0 +1,51 @@
+$bgd-color: #3D7FCF;
+$footer-bgd-color: #3D7FCF;
+$header-bgd-color: rgb(71, 48, 15);
+// $header-bgd-color: rgb(73, 69, 62);
+$white: rgb( 255, 255, 255);
+$black: #111;
+$max-width: 100%;
+$html-font: 16px;
+$line-height: 1.12;
+$header-font-size: 3rem;
+$first-letter: 5rem;
+$hdr-ftr-fg-color: rgb(163, 134, 19);
+$btn-side-dim: 6rem;
+$normal-display-size: 8rem;
+$normal-padding: 2rem;
+$map-width: 28rem;
+
+$btn-map: (
+  // regular bg, hover bg, active bg
+  btnSeattle: (#43293d ,#6f3a62, #f26fd4),
+  btnLondon: (#45391b, #735b20, #fec02d),
+  btnCurrentLoc: (#193c29 ,#1b613b, #20d071),
+);
+
+@mixin justify-direction($direction) {
+  justify-content: $direction;
+}
+// .box { @include border-radius(10px); }
+.flex-space-between {
+    display: flex;
+    // justify-content: space-between;
+    @include justify-direction(space-between);
+    // flex-direction: column;
+}
+
+.flex-space-around {
+    display: flex;
+    // justify-content: space-around;
+    @include justify-direction(space-around);
+    // flex-direction: column;
+}
+
+
+.flex-space-center {
+    display: flex;
+    // justify-content: space-around;
+    @include justify-direction(space-center);
+    // flex-direction: column;
+}
+
+$cities: (Seattle, London, CurrentLoc);
