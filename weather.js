@@ -122,7 +122,7 @@ function cityWeather(city) {
       let formatted = cityWeatherUrlBuilder(cityCord);
 
       let h1 = document.querySelector("h1");
-      h1.innerHTML = `Current Weather and Forcast In ${city.name}`;
+      h1.innerHTML = `Current Weather and Forecast In ${city.name}`;
 
       // var div1 = document.getElementById("list-container");
       var parent = document.querySelector("#weatherInfo");
